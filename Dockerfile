@@ -9,6 +9,7 @@ RUN cd NBXplorer && \
     dotnet publish --output /app/ --configuration Release
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.0.0-buster-slim
+RUN apk add --no-cache bash
 WORKDIR /app
 
 RUN mkdir /datadir
